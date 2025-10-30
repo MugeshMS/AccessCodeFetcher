@@ -53,11 +53,11 @@ public class AccessCodeFetcher1Application implements CommandLineRunner {
 
         List<DeviceBasic> devices = deviceService.getDeviceBasics(baseUrl, token, type);
 
-        System.out.println("\n Devices Found:\n");
-
-        devices.forEach(d ->
-            System.out.println(d.getDeviceName() + " | " + d.getDeviceId() + " | " + d.getAccessToken())
-        );
+//        System.out.println("\n Devices Found:\n");
+//
+//        devices.forEach(d ->
+//            System.out.println(d.getDeviceName() + " | " + d.getDeviceId() + " | " + d.getAccessToken())
+//        );
         excelService.writeDeviceAccessExcel(devices);
         sc.close();
     }
